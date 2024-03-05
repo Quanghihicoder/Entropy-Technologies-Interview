@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #fff;
+}
+
+p.Button_Primary,
+p.Button_Secondary,
+p.Button_Tertiary {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.Button_Primary {
+  background-color: darkgreen;
+  opacity: 0.6;
+}
+
+.Button_Secondary {
+  background-color: darkcyan;
+  opacity: 0.6;
+}
+
+.Button_Tertiary {
+  background-color: darkorange;
+  opacity: 0.6;
+}
+
+.HighLight {
+  opacity: 1;
+}
