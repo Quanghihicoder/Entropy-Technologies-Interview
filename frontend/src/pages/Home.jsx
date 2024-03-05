@@ -177,6 +177,8 @@ const Home = () => {
 
   // Get News
   useEffect(() => {
+    setNews([]);
+
     const getTodayNews = async () => {
       try {
         // Set loading message
@@ -187,16 +189,18 @@ const Home = () => {
 
         // Call API
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=${
+          `https://api.worldnewsapi.com/search-news?text=${
             (newsCate === 0 && "") ||
             (newsCate === 1 && "tech") ||
             (newsCate === 2 && "food")
-          }&pageSize=3&language=en&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+          }&number=3&source-countries=au&language=en&api-key=${
+            process.env.REACT_APP_NEWS_API_KEY
+          }`
         );
 
         // Update to screen
         if (response.data) {
-          setNews(response.data.articles);
+          setNews(response.data.news);
         }
       } catch (error) {
         // If error
@@ -323,10 +327,10 @@ const Home = () => {
                           <a href={n.url}>{fixString(n.title, 10)}</a>
                           <span>
                             {" "}
-                            - {n.source.name} - {n.publishedAt.substring(0, 10)}
+                            - {n.author} - {n.publish_date.substring(0, 10)}
                           </span>
                         </div>
-                        <p>{fixString(n.description, 15)}</p>
+                        <p>{fixString(n.text, 15)}</p>
                       </div>
                     );
                   })}
