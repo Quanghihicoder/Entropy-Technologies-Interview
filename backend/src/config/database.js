@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config()
 
 const db = new pg.Client({
-    database: "entropy",
+    database: process.env.DB_NAME,
     host: "localhost",
     port: 5432,
-    user: "postgres",
+    user: process.env.DB_USER,
     password: process.env.DB_PASS
 })
 
