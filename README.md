@@ -1,6 +1,6 @@
 ## Live Demo: http://3.104.186.235:8001
 
-### I am using AWS EC2 instances, please test ASAP. Uptime: 8AM-9PM every day until Sunday 10 Mar 2024.
+### I am using AWS EC2 instances, please test ASAP. 
 
 ## Youtube Demo: https://youtu.be/LoshLYWeUk4
 
@@ -21,7 +21,7 @@ Note:
 
 +) The weather API is fixed, the location is Sydney
 
-+) The news API has a 1 request/s limit. So can not be quick.
++) The news API has a 1 request/s limit. So can not be quick. And 50 requests/day. 
 
 +) No handle for SQL injection.
 
