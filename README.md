@@ -19,7 +19,11 @@
 
 
 Note: 
+
 +) The weather API is fixed, the location is Sydney
+
 +) The news API has a 1 request/s limit. So can not be quick.
+
 +) No handle for SQL injection. 
+
 +) No test case
