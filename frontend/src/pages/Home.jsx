@@ -71,7 +71,9 @@ const Home = () => {
 
     // Remove from database
     try {
-      await axios.delete(`http://localhost:8001/apis/tasks/${task_id}`);
+      await axios.delete(
+        `${process.env.REACT_APP_TASKS_API}/apis/tasks/${task_id}`
+      );
     } catch (error) {
       console.error(error);
     }
@@ -107,16 +109,19 @@ const Home = () => {
     } else {
       try {
         // Submit create / edit tasks
-        const response = await axios.post(`http://localhost:8001/apis/tasks/`, {
-          data: {
-            user_id: 1,
-            task_id: formID,
-            task_desc: formDesc,
-            task_date: formDate,
-            task_status: formStatus,
-            submit_mode: openForm.mode,
-          },
-        });
+        const response = await axios.post(
+          `${process.env.REACT_APP_TASKS_API}/apis/tasks/`,
+          {
+            data: {
+              user_id: 1,
+              task_id: formID,
+              task_desc: formDesc,
+              task_date: formDate,
+              task_status: formStatus,
+              submit_mode: openForm.mode,
+            },
+          }
+        );
 
         // Get new list of tasks after create
         if (response.data) {
@@ -218,7 +223,9 @@ const Home = () => {
         }));
 
         // Call API
-        const response = await axios.get(`http://localhost:8001/apis/tasks/1`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_TASKS_API}/apis/tasks/1`
+        );
 
         // Update to screen
         if (response.data) {
