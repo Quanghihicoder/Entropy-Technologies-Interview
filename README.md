@@ -1,6 +1,6 @@
 ## Live Demo: http://3.104.186.235:8001
 
-### I am using AWS EC2 instances, please test ASAP. 
+### I am using AWS EC2 instances, please test ASAP. Until Sunday 10 Mar 2024
 
 ## Youtube Demo: https://youtu.be/LoshLYWeUk4
 
